@@ -52,7 +52,7 @@ test("to treat division string input as 0", () => {
 });
 
 test("handle division by zero", () => {
-  expect(calculator().divide(2, 0)).toThrow(Error);
+  expect(() => calculator().divide(2, 0)).toThrow("Can't divide by zero");
 });
 
 test("handle dividing decimals", () => {
