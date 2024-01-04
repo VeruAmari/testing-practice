@@ -8,8 +8,8 @@ test("ciphers with negative value", () => {
   expect(caesarCipher("abc", -1)).toBe("zab");
 });
 
-test("ciphers keys bigger than 24", () => {
-  expect(caesarCipher("abc", 30)).toBe("bcd");
+test("ciphers keys bigger than 26", () => {
+  expect(caesarCipher("abc", 27)).toBe("bcd");
 });
 
 test("returns plaintext when key is 0", () => {
@@ -34,4 +34,8 @@ test("ignores punctuation", () => {
 
 test("ignores numbers", () => {
   expect(caesarCipher("a1c", 1)).toBe("b1d");
+});
+
+test("max size key", () => {
+  expect(caesarCipher("abc", 26)).toBe("abc");
 });
