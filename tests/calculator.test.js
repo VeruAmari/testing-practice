@@ -13,7 +13,7 @@ test("add one negative", () => {
   expect(calculator().add(-1, 2)).toBe(1);
 });
 
-test("treat string input as 0", () => {
+test("treat sum string input as 0", () => {
   expect(calculator().add("a", 1)).toBe(1);
 });
 
@@ -22,32 +22,32 @@ test("basic sub", () => {
   expect(calculator().subtract(2, 1)).toBe(1);
 });
 
-test("sub negatives", () => {
+test("subtract negatives", () => {
   expect(calculator().subtract(-2, -1)).toBe(-1);
 });
 
-test("sub one negative", () => {
+test("subtract one negative", () => {
   expect(calculator().subtract(-1, 2)).toBe(-3);
 });
 
-test("treat string input as 0", () => {
+test("treat subtraction string input as 0", () => {
   expect(calculator().subtract("a", 1)).toBe(-1);
 });
 
 //divide
-test("basic div", () => {
+test("basic division", () => {
   expect(calculator().divide(4, 2)).toBe(2);
 });
 
-test("div negatives", () => {
+test("divide negatives", () => {
   expect(calculator().divide(-4, -2)).toBe(2);
 });
 
-test("div one negative", () => {
+test("divide one negative", () => {
   expect(calculator().divide(-2, 2)).toBe(-1);
 });
 
-test("treat string input as 0", () => {
+test("to treat division string input as 0", () => {
   expect(calculator().divide("a", 1)).toBe(0);
 });
 
@@ -64,15 +64,15 @@ test("basic multip", () => {
   expect(calculator().multiply(4, 2)).toBe(8);
 });
 
-test("to handle two negatives", () => {
+test("to multiply two negatives", () => {
   expect(calculator().multiply(-4, -2)).toBe(8);
 });
 
-test("to handle one negative", () => {
+test("to multiply one negative", () => {
   expect(calculator().multiply(-2, 2)).toBe(-4);
 });
 
-test("treat string input as 0", () => {
+test("treat multiply string input as 0", () => {
   expect(calculator().multiply("a", 1)).toBe(0);
 });
 
