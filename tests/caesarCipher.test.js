@@ -23,3 +23,15 @@ test("handles non numeric keys", () => {
 test("applies a random cipher when no key", () => {
   expect(caesarCipher("abc")).not.toBe("abc");
 });
+
+test("handles uppercase characters", () => {
+  expect(caesarCipher("aBc", 1)).toBe("bCd");
+});
+
+test("ignores punctuation", () => {
+  expect(caesarCipher("a.c", 1)).toBe("b.d");
+});
+
+test("ignores numbers", () => {
+  expect(caesarCipher("a1c", 1)).toBe("b1d");
+});
